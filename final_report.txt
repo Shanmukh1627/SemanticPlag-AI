@@ -1,0 +1,8 @@
+
+AI-Based Academic Plagiarism and Idea Similarity Detection System
+===============================================================
+Date: 09 April 2026
+Student File: uploads\3_Demo_Idea_Similarity.pdf
+Matched File: Target_Paper_Transformers.pdf
+Plagiarism Percentage: 64.21 %
+Type: Idea Level Similarity

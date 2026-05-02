@@ -1,0 +1,31 @@
+
+AI-Based Academic Plagiarism and Idea Similarity Detection System
+==================================================================
+
+Report Generated On: 18 February 2026
+
+--------------------------------------------------
+
+INPUT DETAILS
+
+Student Submitted File: doc1.pdf
+Compared With File: doc2.pdf
+
+--------------------------------------------------
+
+RESULT SUMMARY
+
+Plagiarism Percentage: 100.0 %
+
+Plagiarism Type: Exact Plagiarism
+
+--------------------------------------------------
+
+Technology Used:
+
+- NLP
+- BERT Model
+- Cosine Similarity
+
+
+--------------------------------------------------

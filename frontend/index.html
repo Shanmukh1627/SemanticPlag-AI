@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SemanticPlag | Enterprise AI Integrity</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">SemanticPlag<span style="color: #2563eb;">.ai</span></div>
+        <button id="themeToggle" onclick="toggleTheme()">☀️ Light Mode</button>
+    </nav>
+
+    <header class="hero">
+        <h1>Advanced Semantic Analysis</h1>
+        <p>Powered by all-MiniLM-L6-v2 Semantic Embeddings.</p>
+    </header>
+
+    <main class="container">
+        
+        <div class="upload-card" id="uploadBox" style="border: 2px dashed rgba(255, 255, 255, 0.2); padding: 40px 20px; text-align: center; border-radius: 12px; transition: all 0.3s ease;">
+            
+            <div style="font-size: 48px; margin-bottom: 15px; pointer-events: none;">📄</div>
+            
+            <h2 style="margin-bottom: 8px; pointer-events: none;">Drag & Drop your PDF here</h2>
+            <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px; pointer-events: none;">or click the button below to browse from your computer</p>
+            
+            <input type="file" id="fileInput" hidden onchange="document.getElementById('fileNameLabel').innerText = 'Selected: ' + this.files[0].name">
+            
+            <button style="background: rgba(37, 99, 235, 0.1); color: #60a5fa; border: 1px solid rgba(37, 99, 235, 0.3); padding: 10px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s;" onclick="document.getElementById('fileInput').click()" onmouseover="this.style.background='rgba(37, 99, 235, 0.2)'" onmouseout="this.style.background='rgba(37, 99, 235, 0.1)'">
+                Browse Files
+            </button>
+            
+            <p id="fileNameLabel" style="margin-top: 15px; font-size: 14px; color: #10b981; font-weight: bold;"></p>
+            
+            <button class="primary-btn" id="scanBtn" onclick="processAnalysis()" style="margin-top: 20px; width: 100%;">Run Deep Scan</button>
+        </div>
+
+        <section id="resultSection" class="results" style="display: none;">
+            <div class="score-card">
+                <h3>Similarity Index</h3>
+                <div class="progress-ring">
+                    <svg width="120" height="120">
+                        <circle cx="60" cy="60" r="50" class="bg"></circle>
+                        <circle cx="60" cy="60" r="50" class="prog" id="scoreCircle"></circle>
+                    </svg>
+                    <div class="score-text"><span id="scoreNum">0</span>%</div>
+                </div>
+                <p id="statusMsg" style="text-align: center;">Scanning...</p>
+            </div>
+            
+            <div class="data-card">
+                <h3>Detailed Findings</h3>
+                <div id="findingsText" style="color: #94a3b8; line-height: 1.6; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    Establishing neural connection...
+                </div>
+            </div>
+
+            <button id="downloadBtn" onclick="downloadReport()" style="display: none; grid-column: 1 / -1; margin-top: 15px; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px;">
+                📥 Download Full Report
+            </button>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
