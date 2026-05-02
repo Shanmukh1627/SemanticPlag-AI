@@ -4,3 +4,4 @@ sentence-transformers
 PyPDF2
 scikit-learn
 numpy
+flask-cors
