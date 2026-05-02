@@ -1,0 +1,6 @@
+Flask
+gunicorn
+sentence-transformers
+PyPDF2
+scikit-learn
+numpy
